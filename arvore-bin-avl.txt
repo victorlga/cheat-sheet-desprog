@@ -1,0 +1,10 @@
+Complexidade O(log n)
+
+Igual a arvore de bin-search, porém exige que a árvore esteja balanceada.
+
+Balancemanto = altura da direita menos altura da esquerda >< abs(1)
+
+Se left-left, gira para direita
+Se left-right, gira para esquerda e depois direita
+Se right-right, gira para esquerda
+Se right-left, gira para a direita e depois esquerda

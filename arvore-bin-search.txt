@@ -1,0 +1,9 @@
+Set com lista ligada
+
+TODOS os nós da subárvore esquerda de n são menores que n;
+TODOS os nós da subárvore direita de n são maiores que n.
+
+Insertion: Só soca no fim
+Remove: quando ambos os filhos existem, procura o maior dos menores e preenche o espaço do removido.
+
+Complexidade ainda pode ser O(n) dado natureza do insert.

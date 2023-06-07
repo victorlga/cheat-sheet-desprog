@@ -1,0 +1,33 @@
+Como é importante que as ordenações sejam rápidas, vamos considerar
+a tabela de recomendação de tempo na prática. Como a quantidade pode
+chegar aos milhares, vamos considerar especificamente a recomendação
+para vetores grandes. Por fim, como nada foi afirmado a respeito da
+ordem inicial dos dados, vamos considerar a coluna correspondente a
+vetores sem ordem aparente. (*)
+
+De acordo com essa coluna, o QUICK SORT seria a melhor opção. Porém,
+o uso de vários critérios de desempate exige que o algoritmo seja
+estável, o que leva ao MERGE SORT. Ele é a segunda melhor opção em
+velocidade e é estável.
+
+Ele é o pior em consumo de memória adicional, mas esse critério não
+foi levantado.
+
+(*) Parece razoável supor que o favoritismo em um site não vai ser
+muito diferente do favoritismo em outro, mas estou seguindo o
+princípio de "se o cliente não mencionou algo explicitamente, não
+use", que vocês também devem seguir para simplificar.
+
+------------------------------------------------------------------------------
+
+Como velocidade é importante, vamos considerar as tabelas de recomendação
+de tempo na prática. Em particular, como há milhares de times, vamos
+considerar a tabela para vetores grandes.
+
+Como o objetivo é ordenar em ordem decrescente, podemos inverter o vetor,
+ordenar e inverter de volta. Considerando esse procedimento, como não há
+variações bruscas de pontuação, podemos considerar a coluna relativa
+a vetores quase ou totalmente crescentes, que indica o INSERTION SORT.
+
+Esse algoritmo também tem baixa complexidade de memória adicional e
+estabilidade, embora esses critérios não tenham sido exigidos.

@@ -1,0 +1,12 @@
+Vetor de árvore binária. Ordem vertical.
+
+É um vetor quase ordenado. Índice dos filhos são sempre 2x ou 2x + 1 do indice do pai. 
+
+Propriedade 1: um nó é sempre menor ou igual que qualquer um de seus filhos.
+Propriedade 2: o único andar que pode estar incompleto é o último.
+Propriedade 3: os nós do último andar devem estar todos à esquerda.
+
+Insertion: coloca em baixo e escorrega trocando para cima até pai ser menor ou igual.
+
+Remove: apaga valor na raiz, coloca último valor na raiz e escorrega trocando para baixo até ambos os
+filhos serem maiores ou iguais.

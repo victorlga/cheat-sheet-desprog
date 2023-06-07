@@ -1,0 +1,19 @@
+depois de new(3):   ? ? ?
+depois de push(6):  6 ? ?
+depois de pop():    ? ? ?
+depois de push(2):  2 ? ?
+depois de pop():    ? ? ?
+depois de push(5):  5 ? ?
+depois de push(3):  5 3 ?
+depois de push(4):  5 3 4
+depois de pop():    5 3 ?
+
+depois de new(3):   ? ? ?
+depois de put(6):   6 ? ?
+depois de get():    ? ? ?
+depois de put(2):   ? 2 ?
+depois de get():    ? ? ?
+depois de put(5):   ? ? 5
+depois de put(3):   3 ? 5
+depois de put(4):   3 4 5
+depois de get():    3 4 ?

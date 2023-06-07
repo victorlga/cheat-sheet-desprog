@@ -1,0 +1,45 @@
+Erro para evitar: esquecer de somar ou subtrair 1 na conta seguinte.
+
+iteracao 1: 7 = (0+15)/2
+iteracao 2: 3 = (0+6)/2
+iteracao 3: 5 = (4+6)/2
+iteracao 4: 6 = (6+6)/2
+
+----------------------------------
+
+3, 2, 6, 0, 4
+
+bubble sort
+2, 3, 0, 4, 6
+2, 0, 3, 4, 6
+0, 2, 3, 4, 6
+0, 2, 3, 4, 6
+
+selection sort
+0, 2, 6, 3, 4
+0, 2, 6, 3, 4
+0, 2, 3, 6, 4
+0, 2, 3, 4, 6
+
+insertion sort
+2, 3, 6, 0, 4
+2, 3, 6, 0, 4
+0, 2, 3, 6, 4
+0, 2, 3, 4, 6
+
+-------------------------------
+Erro para evitar: esquecer que é o valor do índice.
+
+final da iteração 1: i = 1, j = 3
+final da iteração 2: i = 2, j = 3
+final da iteração 3: i = 2, j = 4
+final da iteração 4: i = 2, j = 5
+final da iteração 5: i = 2, j = 6
+final da iteração 6: i = 3, j = 6
+
+Erro para evitar: esquecer de realizar a troca, ao invés de arrastar o vetor para o lado.
+final da iteração 1: p = 0, v = 6 5 1 3 5 4
+final da iteração 2: p = 0, v = 6 5 1 3 5 4
+final da iteração 3: p = 1, v = 1 5 6 3 5 4
+final da iteração 4: p = 2, v = 1 3 6 5 5 4
+final da iteração 5: p = 2, v = 1 3 6 5 5 4

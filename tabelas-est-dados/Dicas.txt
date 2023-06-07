@@ -1,0 +1,8 @@
+Olhar para complexidade quando é importante que nenhuma operação seja lenta.
+
+Olhar para prática quando é necessário que a maioria seja a mais rápida.
+
+Na execução da fila em vetor, sempre definir o valor do indice através de Ex (q->end - index) % q->capacity
+
+Deslocar para esquerda, loop para direita
+Deslocar para direita, loop para esquerda

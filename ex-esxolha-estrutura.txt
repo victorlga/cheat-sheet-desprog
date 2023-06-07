@@ -1,0 +1,61 @@
+Como um mesmo usuário do sistema não pode fazer duas requisições ao mesmo
+tempo, o tamanho máximo que a estrutura pode atingir é conhecido, pois é
+igual ao número de usuários.
+
+Como o cliente não quer desperdício de memória e o tamanho máximo é conhecido,
+podemos usar a tabela de recomendação de memória na prática. Nessa tabela,
+a implementação mais recomendada é a LISTA LIGADA, pois sabemos que a
+quantidade de requisições simultâneas é baixíssima em média.
+
+Ela também oferece segurança contra estouro, embora isso não seja relevante
+visto que o tamanho máximo é conhecido.
+
+Por fim, ela não é a mais rápida na prática, mas isso não foi explicitamente
+exigido pelo cliente.
+
+---------------------------------------------------------------------------------------------
+
+Como o tamanho máximo é conhecido (mil), podemos usar a tabela de recomendação
+de memória na prática, visto que baixo desperdício foi pedido pelo cliente. Como
+o tamanho médio na prática é muito menor que o máximo (algumas dezenas), a
+implementação mais recomendada é a LISTA LIGADA.
+
+Ela também oferece segurança contra estouro, embora isso não seja relevante
+visto que o tamanho máximo é conhecido.
+
+Ela é a pior em velocidade, mas o cliente pediu para priorizar memória
+em relação a CPU.
+
+--------------------------------------------------------------------------------------------
+
+Como manter permanentemente alocada alguma estrutura proporcional ao
+tamanho do mapa não é viável, não podemos usar o VETOR ESTÁTICO.
+
+Dentre as duas opções restantes, a tabela de recomendação de tempo
+na prática indica o VETOR DINÂMICO.
+
+Ela também oferece segurança contra estouro, embora isso não seja relevante
+visto que o tamanho máximo é conhecido.
+
+Ela não é a melhor em relação a memória, mas o cliente não fez uma
+exigência em relação a isso, salvo a de não ser proporcional ao
+tamanho do mapa permanentemente. E essa específica o dinâmico satisfaz.
+
+---------------------------------------------------------------------------------------------
+
+Como o tamanho máximo é conhecido (tamanho total do texto), podemos usar a
+tabela de recomendação de memória na prática, visto que baixo desperdício foi
+pedido pelo cliente. Como o tamanho médio na prática não é próximo do tamanho
+máximo possível, essa tabela indica a LISTA LIGADA.
+
+No entanto, o cliente também exige velocidade. E, na tabela de recomendação
+de tempo na prática, a indicação é o VETOR ESTÁTICO.
+
+Em ambas as tabelas, o VETOR DINÂMICO é uma opção meio termo, nem pior
+e nem melhor.
+
+A escolha, portanto, depende de mais informações. Se velocidade for
+prioritária, devemos escolher o VETOR ESTÁTICO. Se memória for
+prioritária, devemos escolher a LISTA LIGADA. Se for importante
+que nem memória e nem velocidade sejam excessivamente ruins,
+devemos escolher o VETOR DINÂMICO.

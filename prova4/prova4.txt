@@ -1,0 +1,113 @@
+Questão 1.a
+
+depois de new(3):  ? ? ?
+depois de push(5): 5 ? ?
+depois de pop():   ? ? ?
+depois de push(1): 1 ? ?
+depois de push(4): 1 4 ?
+depois de push(2): 1 4 2
+depois de pop():   1 4 ?
+depois de push(3): 1 4 3
+
+Questão 1.b
+depois de new(3): ? ? ?
+depois de put(5): 5 ? ?
+depois de get():  ? ? ?
+depois de put(1): ? 1 ?
+depois de put(4): ? 1 4
+depois de put(2): 2 1 4
+depois de get():  2 ? 4
+depois de put(3): 2 3 4
+
+--------------------------------------------------------------------------------------------
+Questão 2
+Feita no papel.
+
+--------------------------------------------------------------------------------------------
+Questão 3
+int queue_int_maxget(queue_int *q) {
+    int max = q->data[q->begin];
+    int index;
+
+    for (int i = 1; i < q->size; i++) {
+        int temp = q->data[((q->begin + i) % q->capacity)];
+        if (max < temp) {
+            index = (q->begin + i) % q->capacity;
+        }
+    }
+
+    int value = q->data[index];
+
+    while (index != q->begin) {
+        int temp = index;
+        index = (index-1) % q->capacity;
+        q->data[temp] = q->data[index];
+    }
+    q->size--;
+    q->begin = (q->begin + 1) % q->capacity;
+    return value;
+}
+
+-------------------------------------------------------------------------------------------
+Questão 4
+int queue_int_maxget(queue_int *q) {
+    node * max = q->first;
+    node * n = q->first;
+
+    while (n != NULL) {
+        if (max->value < n->value) {
+            max = n;
+        }
+        n = n->next;
+    }
+    int value = max->value;
+
+    node * p = NULL;
+    n = q->first;
+    while (n != max) {
+        p = n;
+        n = n->next;
+    }
+
+    if (p != NULL) {
+        p->next = max->next;
+    } else {
+        q->first = max->next;
+    }
+    free(max);
+    return value;
+}
+
+-----------------------------------------------------------------------------------
+Questão 5
+Como o algoritmo sempre mantém a ordenação anterior, devemos considerar 
+a coluna relativa a vetores quase ou totalmente crescentes para avaliar
+tempo na prática e melhor aproveitar o processamento.
+
+Como a memória também será escassa, devemos escolher algoritmos com baixa
+complexidade de memória adicional. Portanto, o algoritmo mais recomendado
+é o INSERTION SORT.
+
+Esse algoritmo também apresenta estabilidade, embora esses critérios não
+tenham sido exigidos.
+
+Esse algoritmo não é o mais adequado para vetores longos desordenados,
+porém esse é o caso apenas da primeira ordenação. Como o enunciado não
+destaca importância na primeira, vou considerar que ela é trivial.
+
+-----------------------------------------------------------------------------------
+Questão 6
+Como temos limitação em processamento, devemos considerar a tabela 
+de complexidade. Como as operações na pilha precisam ser muito rápidas,
+devemos considerar a tabela de tempo na prática. Portanto o VETOR DINAMICO
+NÃO será a melhor opção.
+
+O tamanho máximo da pilha é conhecido (dimensões do salão), portanto
+não será necessário se preocupar com segurança contra estouro de memória.
+Por ser a estrura com operações mais rápidas, a mais recomendada é o
+VETOR ESTÁTICO. 
+
+Essa estrutura é a pior no uso de memória no caso de tamanho médio
+distante do tamanho máximo, mas o enunciado não especifica informações
+sobre o tamanho médio e especifica que memória não será um problema,
+dado que destruíram o computador do colega desastrado.

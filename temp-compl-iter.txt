@@ -1,0 +1,49 @@
+Quantidade de iterações do loop externo (x):
+-------------------------------------------
+Contador começa de 3 e aumenta em 4 enquanto for menor que 3n.
+
+Depois de x-1 iterações, a condição ainda vale.
+3 + 4(x-1) < 3n
+3 + 4x - 4 < 3n
+4x - 1 < 3n
+4x < 3n + 1
+x < (3n+1)/4
+
+x = O(n), ou seja, x <= c_x n
+
+
+Quantidade de iterações do loop interno (y):
+-------------------------------------------
+Contador começa de 4 e aumenta em 5 enquanto for menor ou igual a 2i.
+
+Depois de y-1 iterações, a condição ainda vale.
+4 + 5(y-1) <= 2i
+4 + 5y - 5 <= 2i
+5y - 1 <= 2i
+5y <= 2i + 1
+y <= (2i+1)/5
+
+y = O(i), ou seja, y <= c_y i
+
+
+Valor de i ao longo do loop externo:
+-----------------------------------
+i = 3, 7, 11, ..., 3+4(x-1)
+
+
+Limitante para as iterações de todas as execuções do loop interno:
+-----------------------------------------------------------------
+  c_y (3 + 7 + 11 + ... + (3+4(x-1)))
+= c_y (3 + 7 + 11 + ... + (4x-1)))
+
+Soma de PA
+- primeiro elemento 3
+- último elemento 4x-1
+- número de elementos x
+
+= c_y (3 + 4x - 1) (x / 2)
+= c_y (4x + 2) (x / 2)
+= c_y (x + 1) x
+
+Como x <= c_x n, pelas regras de simplificação
+podemos concluir que a complexidade é O(n^2).
